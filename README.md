@@ -65,5 +65,5 @@ Then enable Pages in Settings as described above.
 
 ## Before Deploying
 
-- Replace the profile photo placeholder in the About section with your real photo
-- Update the email link in the Contact section (`mailto:your.email@example.com`) with your actual email
+- Replace the profile photo placeholder in the About section with your real photo (if one is used)
+- Double-check the GitHub, LinkedIn, and email links in the Contact section

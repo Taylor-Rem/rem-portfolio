@@ -1,7 +1,9 @@
 // ========== TYPEWRITER ==========
 const phrases = [
   'Full Stack Developer',
+  'Rust Enthusiast',
   'Automation Engineer',
+  'Systems Builder',
   'Software Engineer',
 ];
 
