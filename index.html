@@ -52,7 +52,7 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>I'm a full-stack software developer based in American Fork, UT. I work across the stack at Kingsley Management Corporation — PHP/Laravel, Vue.js, MySQL, Flutter — and own complex features end-to-end, from the data model to the rollout plan. I started there as an automation engineer writing Python/Selenium tools for the support team, then transitioned into full-stack development in November 2024. That background means I know the domain intimately before I touch a schema.</p>
-          <p>In my spare time I'm building <a href="#projects" class="inline-link">Artificer</a>, a multi-GPU AI agent orchestrator written in async Rust. I'm pursuing remote software roles where I can keep owning projects top to bottom.</p>
+          <p>On the side I've been shipping personal projects fast: <a href="#projects" class="inline-link">Plateful</a> (a multi-tenant restaurant ordering SaaS on Laravel 13 + Vue 3 with Stripe Connect), <a href="#projects" class="inline-link">Sharewire</a> (a self-hosted music sharing platform I built end-to-end in 2.5 days), and <a href="#projects" class="inline-link">Artificer</a> (a multi-GPU AI agent orchestrator in async Rust). I'm pursuing remote software roles where I can keep owning projects top to bottom.</p>
         </div>
         <div class="about-photo reveal">
           <div class="photo-placeholder">
@@ -158,6 +158,39 @@
           <div class="project-links">
             <a class="project-link" href="https://github.com/Taylor-Rem/artificer" target="_blank" rel="noopener" title="View on GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal featured-project">
+          <div class="project-badge">Personal Project</div>
+          <h3 class="project-name">Plateful</h3>
+          <p class="project-subtitle">Multi-Tenant Restaurant Ordering SaaS</p>
+          <p class="project-desc">A single-codebase, multi-tenant SaaS that gives each restaurant a branded online ordering storefront on its own subdomain or custom domain — three distinct UI surfaces (customer storefront, per-restaurant tenant admin, platform super-admin) all served by one Laravel 13 + Inertia v3 + Vue 3 app. Designed the tenancy layer from the ground up: a custom-domain-first <code>ResolveTenant</code> middleware with subdomain fallback, a <code>CurrentTenant</code> container, and a <code>BelongsToTenant</code> trait that applies a global scope and auto-stamps <code>restaurant_id</code> so feature code never has to remember to filter by tenant. Implemented Stripe Connect destination charges with a per-restaurant <code>application_fee_percent</code>, a DB-backed cart and <code>OrderPlacement</code> service handling hours/closed-state validation, tax, tips, and loyalty awarding, and a pluggable <code>DeliveryDispatcher</code> abstraction. Backed by 65+ Pest test files covering tenant resolution, cross-tenant isolation, checkout, auth, and admin flows.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>Laravel 13</span><span>Vue 3</span><span>Inertia v3</span><span>TypeScript</span><span>Tailwind</span><span>PostgreSQL</span><span>Pest 4</span><span>Stripe Connect</span>
+          </div>
+          <div class="project-links">
+            <span class="project-link disabled" title="Private Repo">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="project-card reveal featured-project">
+          <div class="project-badge">Personal Project</div>
+          <h3 class="project-name">Sharewire</h3>
+          <p class="project-subtitle">Self-Hosted Music Sharing Platform</p>
+          <p class="project-desc">Built end-to-end in <strong>2.5 days</strong> as a portfolio piece, scoped to five user stories (auth, upload, browse and search, personal library with audio playback, uploader-delete with cascade) and shipped with <strong>121 Pest tests / 467 assertions</strong> covering every endpoint, action, and policy plus a full end-to-end demo flow. Architected with skinny controllers (every method ≤ 15 lines), Form Requests with policy-backed <code>authorize</code>, typed final readonly DTOs, Action classes, Eloquent Resources, and Policies — zero <code>DB::raw</code> or <code>DB::table</code> in <code>app/</code>. Wired Wayfinder for compile-time-typed Laravel routes consumed from Vue 3 + Inertia, and built a global audio player as a module-level singleton composable that survives Inertia page navigations without Pinia (HTTP Range support so seeking never re-downloads the file). Self-hosted on a Debian laptop via Caddy + PHP-FPM 8.4 + a systemd queue worker, exposed publicly over HTTPS by Tailscale Funnel.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>Laravel 13</span><span>Vue 3</span><span>Inertia</span><span>TypeScript</span><span>Tailwind</span><span>Pest</span><span>SQLite</span><span>Caddy</span><span>Tailscale</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://github.com/Taylor-Rem/sharewire" target="_blank" rel="noopener" title="View on GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a class="project-link" href="https://sharewire.taila21774.ts.net" target="_blank" rel="noopener" title="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </a>
           </div>
         </div>
