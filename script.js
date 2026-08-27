@@ -4,6 +4,7 @@ const phrases = [
   'Rust Enthusiast',
   'Automation Engineer',
   'Systems Builder',
+  'AI Consultant',
   'Software Engineer',
 ];
 
@@ -43,7 +44,7 @@ function typewriterTick() {
   setTimeout(() => requestAnimationFrame(typewriterTick), speed);
 }
 
-requestAnimationFrame(typewriterTick);
+if (typewriterEl) requestAnimationFrame(typewriterTick);
 
 // ========== MOBILE NAV ==========
 const navToggle = document.getElementById('navToggle');

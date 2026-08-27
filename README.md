@@ -67,3 +67,15 @@ Then enable Pages in Settings as described above.
 
 - Replace the profile photo placeholder in the About section with your real photo (if one is used)
 - Double-check the GitHub, LinkedIn, and email links in the Contact section
+
+
+## Custom domain: taylorremund.com
+
+The repo contains a `CNAME` file with `taylorremund.com`, so GitHub Pages will claim the domain automatically once DNS points at it. At the domain registrar:
+
+1. Add four **A records** for the apex (`@`) pointing to GitHub Pages:
+   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+2. Add a **CNAME record** for `www` pointing to `<github-username>.github.io`.
+3. In the repo: **Settings → Pages → Custom domain** — enter `taylorremund.com`, wait for the DNS check, then tick **Enforce HTTPS** (the certificate takes a few minutes to issue).
+
+DNS changes can take up to a few hours to propagate. Verify with `dig taylorremund.com +noall +answer`.
