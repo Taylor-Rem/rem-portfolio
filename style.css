@@ -311,6 +311,18 @@ img { display: block; max-width: 100%; }
 .about-text p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.85; }
 .about-text p + p { margin-top: 18px; }
 
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid #ffffff;
+  outline: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
 .photo-placeholder {
   width: 220px; height: 220px;
   border-radius: 50%;
