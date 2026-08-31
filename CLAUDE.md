@@ -34,7 +34,7 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 ## Content rules
 
 - The Plateful section sells the real product at https://plateful.fyi — keep its claims in sync with the Plateful repo's README (pricing: 4% per order, capped monthly, no subscriptions; do not state the cap amount on this site without checking it).
-- Prices on `/ai/` are real commitments: session $150 ($250 for 2h), computer install $500–$1,500 (+$79/mo care plan), website/store from $1,500 + greater of $99/mo or 4% of store sales. Don't change them without Taylor saying so.
+- Prices on `/ai/` are real commitments: session $150 ($250 for 2h), computer install $500–$1,500 (+$79/mo care plan), website/store from $1,500 + greater of $99/mo or 4% of store sales, capped at $500/mo. Don't change them without Taylor saying so.
 - Never invent testimonials, client names, or metrics. Every claim on the site must be true (Plateful is live; the stats in About come from Taylor's resume).
 - The honesty rule from Taylor's positioning applies: AI-assisted building is a feature told confidently, never a secret and never overstated.
 - Contact email is `remundtaylor3@gmail.com` until a domain email exists; update everywhere at once when it changes (there are several mailto links on /ai/).
