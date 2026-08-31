@@ -12,7 +12,7 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 - Hosted on GitHub Pages from `main` (root). `CNAME` pins the custom domain `taylorremund.com` — never delete or edit that file.
 - A push to `main` is a production deploy. Preview locally first: `python3 -m http.server 8000` (needed for the `/ai/` links to resolve; plain file:// won't).
 - Rollback: `git revert HEAD && git push`.
-- **Never run git commits or pushes on Taylor's behalf — stage the changes and let him review and commit.**
+- **Claude may stage, commit, and push directly** (Taylor granted this 2026-08-28). Keep commits small with plain messages; remember a push to `main` is a production deploy.
 
 ## File map
 
