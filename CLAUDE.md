@@ -3,6 +3,7 @@
 Personal site for Taylor Remund. Two audiences, two surfaces:
 - `/` (index.html) — Taylor the engineer: portfolio, projects, experience. Primary audience: employers/recruiters.
 - `/ai/` (ai/index.html) — Taylor's AI services practice: pitch, packages with published prices, FAQ. Primary audience: small-business clients.
+- `/privacy/` and `/terms/` — legal pages. They exist partly for carriers: the SMS ("Text Your Website") service needs a public privacy policy and terms with specific messaging language for A2P 10DLC registration.
 
 This repo is also a sales exhibit: it is maintained exactly the way Taylor maintains client sites — plain files in git, edited by asking Claude, deployed on push. Keep it that way.
 
@@ -18,7 +19,8 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 
 - `index.html` — the whole homepage, section by section (icon sprite, nav, hero, about, Plateful product section, AI-services teaser, skills, projects, experience, contact).
 - `ai/index.html` — the whole services page (nav, hero, how-it-works, packages, why-me, FAQ, contact).
-- `style.css` — all styles for both pages. Shared design tokens live in `:root`; AI-page-specific classes are prefixed `svc-`, `pkg-`, `step-`, `faq-`.
+- `privacy/index.html`, `terms/index.html` — legal pages, same nav/footer, `.legal` wrapper.
+- `style.css` — all styles for every page. Shared design tokens live in `:root`; AI-page-specific classes are prefixed `svc-`, `pkg-`, `step-`, `faq-`; legal-page classes `legal-`; footer links `footer-links`.
 - `script.js` — typewriter (homepage only, null-guarded), mobile nav, scroll reveal, active-nav highlighting. Shared by both pages.
 
 ## Design rules
@@ -34,7 +36,9 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 ## Content rules
 
 - The Plateful section sells the real product at https://plateful.fyi — keep its claims in sync with the Plateful repo's README (pricing: 4% per order, capped monthly, no subscriptions; do not state the cap amount on this site without checking it).
-- Prices on `/ai/` are real commitments: session $150 ($250 for 2h), computer install $500–$1,500 (+$79/mo care plan), website/store from $1,500 + greater of $99/mo or 4% of store sales, capped at $500/mo. Don't change them without Taylor saying so.
+- Prices on `/ai/` are real commitments: session $150 ($250 for 2h), computer install $500–$1,500 (+$79/mo care plan), AI-Run Website/Store from $1,500 + greater of $99/mo or 4% of store sales capped at $500/mo, Text Your Website from $2,500 + greater of $249/mo or 4% of store sales capped at $500/mo. Don't change them without Taylor saying so.
+- There are two website tiers and the difference must stay explicit everywhere it's mentioned: **AI-Run Website** = client runs Claude on their own machine and account (they own everything, including the AI subscription). **Text Your Website** = client texts a number, Taylor's own systems and AI account do the work (client owns the site and code; the texting service is Taylor's and ends when the engagement ends). Never let copy claim "you own every piece" or "if we part ways everything keeps working" without that distinction — it's true of the site, not the texting pipe.
+- The legal pages carry language carriers check during 10DLC review: the `legal-callout` blocks (the no-sharing-for-marketing clause in privacy, the consent/STOP/HELP/rates block in terms) must stay. The privacy policy names the three services that touch client messages (Twilio, Anthropic, GitHub) and says photos sent for the site become public — keep that honest and current if the pipeline changes. Don't claim anything about Anthropic's training or retention practices unless Taylor has verified it for his account.
 - Never invent testimonials, client names, or metrics. Every claim on the site must be true (Plateful is live; the stats in About come from Taylor's resume).
 - The honesty rule from Taylor's positioning applies: AI-assisted building is a feature told confidently, never a secret and never overstated.
 - Contact email is `remundtaylor3@gmail.com` until a domain email exists; update everywhere at once when it changes (there are several mailto links on /ai/).
