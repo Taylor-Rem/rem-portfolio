@@ -19,7 +19,7 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 
 - `index.html` — the whole homepage, section by section (icon sprite, nav, hero, about, Plateful product section, AI-services teaser, skills, projects, experience, contact).
 - `ai/index.html` — the whole services page (nav, hero, how-it-works, packages, why-me, FAQ, contact).
-- `privacy/index.html`, `terms/index.html` — legal pages, same nav/footer, `.legal` wrapper.
+- `privacy/index.html`, `terms/index.html`, `sms/index.html` — legal/compliance pages, same nav/footer, `.legal` wrapper. `/sms/` is the public opt-in page Twilio's 10DLC reviewer checks: it must show the service number, the consent/STOP/HELP/rates language, and link privacy + terms. Footer on every page links all three.
 - `style.css` — all styles for every page. Shared design tokens live in `:root`; AI-page-specific classes are prefixed `svc-`, `pkg-`, `step-`, `faq-`; legal-page classes `legal-`; footer links `footer-links`.
 - `script.js` — typewriter (homepage only, null-guarded), mobile nav, scroll reveal, active-nav highlighting. Shared by both pages.
 
