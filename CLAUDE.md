@@ -42,3 +42,10 @@ This repo is also a sales exhibit: it is maintained exactly the way Taylor maint
 - Never invent testimonials, client names, or metrics. Every claim on the site must be true (Plateful is live; the stats in About come from Taylor's resume).
 - The honesty rule from Taylor's positioning applies: AI-assisted building is a feature told confidently, never a secret and never overstated.
 - Contact email is `remundtaylor3@gmail.com` until a domain email exists; update everywhere at once when it changes (there are several mailto links on /ai/).
+
+## The service behind `/ai/`
+
+`~/projects/VISION.md` is the product picture (tiers, what's decided, what's
+open) and `~/projects/sms-relay/plans/07-product-site.md` the plan for this
+page. The every-claim-true rule above is why: the code that makes each claim
+true is in `sms-relay/`.
