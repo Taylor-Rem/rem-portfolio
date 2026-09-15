@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy | Taylor Remund</title>
-  <meta name="description" content="What Taylor Remund collects, why, and who sees it — for this website and for the text-message website service.">
+  <meta name="description" content="What Taylor Remund collects, why, and who sees it — for this website and for the messaging service (SMS, Telegram, Discord) that changes clients' websites and menus.">
   <meta name="robots" content="noindex, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,9 +34,9 @@
     <div class="container legal">
       <span class="section-eyebrow">Legal</span>
       <h1 class="section-title">Privacy Policy</h1>
-      <p class="legal-meta">Effective September 12, 2026</p>
+      <p class="legal-meta">Effective September 14, 2026</p>
 
-      <p class="legal-intro">This is written in plain language on purpose. It covers two things: this website, and the service where clients text a phone number to change their own website. If anything here is unclear, email me and I'll answer directly.</p>
+      <p class="legal-intro">This is written in plain language on purpose. It covers three things: this website; the messaging service, where clients text a phone number (or message a bot on Telegram or Discord) to change their own website or restaurant menu; and the public chat room where anyone can talk to the bot. If anything here is unclear, email me and I'll answer directly.</p>
 
       <h2>Who I am</h2>
       <p>I'm Taylor Remund, a software developer operating as a sole proprietor in Utah. I'm the only person who handles your information. Contact: <a href="mailto:remundtaylor3@gmail.com" class="inline-link">remundtaylor3@gmail.com</a>.</p>
@@ -49,29 +49,38 @@
         <li><strong>Fonts.</strong> The typefaces load from Google Fonts, which means your browser requests them from Google's servers. Google's handling of that request is covered by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google's privacy policy</a>.</li>
       </ul>
 
-      <h2>The text-message website service</h2>
-      <p>Some clients change their website by texting a phone number I operate. This section is for them and for anyone they authorize to use it.</p>
+      <h2>The messaging service</h2>
+      <p>Clients change their website or their restaurant's menu by messaging a bot I operate: by SMS to a phone number, or by Telegram or Discord message. This section is for them and for anyone they authorize to use it. On the services page the bot is called Patch; it is Claude, an AI model made by Anthropic, running under rules I wrote.</p>
 
-      <p><strong>What I collect.</strong> Your mobile phone number, the content of the messages you send, any photos or attachments you send, and the time they were sent. I also keep a record of what was changed on your site as a result, and the reply that was sent to you.</p>
+      <p><strong>What I collect.</strong> Your mobile phone number, or your Telegram or Discord user ID and display name; the content of the messages you send; any photos or attachments; and the time they were sent. I also keep a log of each piece of work the AI did in response (what it read, what it changed, the reply it sent), and a record of what was changed on your site or menu. In a Discord channel or Telegram group you've pointed at your project, the bot reads the messages addressed to it; in the public chat room it also reads the last handful of messages in the channel so it can follow the conversation.</p>
 
-      <p><strong>Why.</strong> Solely to do what you asked: make the change to your website and tell you when it's done. Your number is also used to confirm you're someone authorized to make changes to that site. It is never used for anything else — no marketing, no newsletters, no outreach.</p>
+      <p><strong>Why.</strong> Solely to do what you asked: make the change and tell you when it's done. Your number or user ID is also how the service knows you're someone authorized to change that site. It is never used for anything else &mdash; no marketing, no newsletters, no outreach. Messages from a number or account that isn't authorized aren't acted on; I'm told the ID so I can add it if it should have access.</p>
 
-      <p><strong>Who processes it.</strong> Making this work involves three services, each of which handles your messages under its own privacy terms:</p>
+      <p><strong>Who processes it.</strong> Making this work involves a few services, each of which handles its piece under its own privacy terms:</p>
       <ul>
-        <li><strong>Twilio</strong> delivers the text messages in both directions. Your number and message content pass through their systems.</li>
-        <li><strong>Anthropic</strong> provides the AI (Claude) that reads your request and makes the change. The text of your message and any photos you send are sent to Anthropic to be interpreted and acted on, under <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener" class="inline-link">Anthropic's privacy policy</a>.</li>
-        <li><strong>GitHub</strong> stores your website's code and files. Because your website is public, any photo you send to be published on it becomes public the moment it goes live.</li>
+        <li><strong>Twilio</strong> delivers SMS and MMS in both directions. Your number and message content pass through their systems.</li>
+        <li><strong>Telegram</strong> and <strong>Discord</strong> deliver messages on those apps under <a href="https://telegram.org/privacy" target="_blank" rel="noopener" class="inline-link">Telegram's</a> and <a href="https://discord.com/privacy" target="_blank" rel="noopener" class="inline-link">Discord's</a> privacy policies. My system fetches your messages from them; nothing runs inside their apps.</li>
+        <li><strong>Anthropic</strong> provides the AI (Claude) that reads your request and does the work. The text of your message and any photos you send are sent to Anthropic to be interpreted and acted on, under <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener" class="inline-link">Anthropic's privacy policy</a> and the terms of the account the work runs on (mine on the managed tier; yours if you bring your own key). Read their policy for what they do with it; I don't make claims about it here.</li>
+        <li><strong>GitHub</strong> stores your website's code and files and serves the site. Because your website is public, any photo you send to be published on it becomes public the moment it goes live.</li>
+        <li><strong>Plateful</strong> (my own ordering platform) stores your restaurant's menu, photos, and orders when the change is to a restaurant; changes made through the bot are logged there under the key that made them, like any other change.</li>
+        <li><strong>Pexels</strong> supplies stock photos when you ask for one. The search words are sent to Pexels; nothing else is.</li>
+        <li><strong>Google</strong> (Gemini) generates photos when you ask for a made-up image. The description of the image, and a reference photo if you supplied one, are sent to Google under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="inline-link">Google's privacy policy</a>.</li>
       </ul>
 
-      <p><strong>What I don't do with it.</strong> I don't sell it. I don't share it with anyone for advertising or marketing. I don't use it to build profiles. The only people and services who see your messages are me and the three services above, and only to carry out your request.</p>
+      <p><strong>What I don't do with it.</strong> I don't sell it. I don't share it with anyone for advertising or marketing. I don't use it to build profiles. The only people and services who see your messages are me and the services above, and only to carry out your request.</p>
 
       <div class="legal-callout">
         <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors in support services, such as customer service, is permitted. All other use-case categories exclude text-messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
       </div>
 
-      <p><strong>Opting out.</strong> Reply <strong>STOP</strong> to any message to stop receiving texts from the service number. Reply <strong>HELP</strong> for help. Note that if you stop texts, the service can no longer reply to you — text <strong>START</strong> to turn it back on.</p>
+      <p><strong>Opting out.</strong> Reply <strong>STOP</strong> to any text to stop receiving SMS from the service number. Reply <strong>HELP</strong> for help. Note that if you stop texts, the service can no longer reply to you &mdash; text <strong>START</strong> to turn it back on. On Telegram or Discord, block or leave the bot, or ask me to remove you.</p>
 
-      <p><strong>How long I keep it.</strong> For as long as you're a client, plus a short period afterward so I can troubleshoot if something went wrong. Message logs are kept on equipment I control. When our agreement ends, or any time you ask, I delete the logs of your messages. Photos you asked to have published stay on your website, because it's your website — remove them the same way you added them, or ask and I'll do it.</p>
+      <p><strong>The usage ledger.</strong> Each message the AI handles, and each photo it generates, is one line in a usage ledger: when, which project, who sent it, what it cost, and what you were charged. It does not hold the content of your message. That ledger is the record for billing on the managed tier. Because it's a financial record, it's kept after you leave, for as long as tax and accounting rules require.</p>
+
+      <p><strong>How long I keep the rest.</strong> Message logs and the AI's work logs are kept for as long as you're a client, plus a short period afterward so I can troubleshoot if something went wrong. They're stored on equipment I control. When our agreement ends, or any time you ask, I delete them. Photos you asked to have published stay on your website or menu, because those are yours &mdash; remove them the same way you added them, or ask and I'll do it.</p>
+
+      <h2>The public chat room</h2>
+      <p>There is (or will be; the services page says which) a public Telegram or Discord room where anyone can talk to the bot about what it does. It's public: anyone in the room sees what you write. Everything the bot handles there is logged, and every few hours the AI condenses those logs into a short memory file so the bot remembers people and running jokes; that file is kept and may be edited by me. The bot in that room has no access to any client's site or data. Don't share anything private there. To have what you said removed from the logs and the memory file, ask me.</p>
 
       <h2>Your rights</h2>
       <p>You can ask me at any time what information I hold about you, ask me to correct it, or ask me to delete it. Email me and I'll do it — no forms, no waiting period. If you're in a place with specific privacy laws (California, the EU, the UK), those rights apply and I'll honor them.</p>

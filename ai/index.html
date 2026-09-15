@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Services | Taylor Remund</title>
-  <meta name="description" content="I install AI in small businesses — on your computer, your website, your workflows — with guardrails and training. Or skip the install and just text your website. Sessions from $150.">
-  <meta property="og:title" content="AI Services — Taylor Remund">
-  <meta property="og:description" content="AI installed in your business with guardrails and training — or a website you update by texting it. Sessions from $150.">
+  <title>Text Us, It's Handled | Taylor Remund</title>
+  <meta name="description" content="Text a number and your website or restaurant menu gets changed, checked, and confirmed back to you. SMS, Telegram, or Discord. Published prices, prepaid credits, run by a working software engineer in Utah.">
+  <meta property="og:title" content="Text us, it's handled — Taylor Remund">
+  <meta property="og:description" content="A number you text when your website or menu needs to change. Claude does the work, checks it's live, and texts you back. Published prices.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://taylorremund.com/ai/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,17 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<!--
+  SERVICE NAME: undecided (TAYLOR-TODO §3). Every visible mention is the token
+  {{SERVICE}}; the small script at the bottom of this page shows "Patch" (the
+  bot's name) in its place until the token is renamed. To rename, once:
+      sed -i 's/{{SERVICE}}/YourName/g' ai/index.html
+  The <head> above is deliberately name-free so crawlers never see the token.
+
+  CLAIMS: every sentence on this page about what the service does is mapped to
+  a line in sms-relay/README.md or the relay code in ai/CLAIMS.md. Change the
+  code, change the sentence, update the map.
+-->
 
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar" id="navbar">
@@ -25,11 +36,11 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#how">How It Works</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#why">Why Me</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#packages">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="../">Portfolio</a></li>
-        <li><a href="mailto:remundtaylor3@gmail.com?subject=AI%20Working%20Session" class="nav-cta">Book a Session</a></li>
+        <li><a href="mailto:remundtaylor3@gmail.com?subject=Getting%20started" class="nav-cta">Get Started</a></li>
       </ul>
     </div>
   </nav>
@@ -37,13 +48,14 @@
   <!-- ==================== HERO ==================== -->
   <section class="hero hero-compact" id="hero">
     <div class="hero-content">
-      <span class="hero-kicker reveal">AI Services &middot; Utah &amp; Remote</span>
-      <h1 class="hero-name reveal">AI that works for your business.</h1>
-      <p class="hero-tagline reveal">I set up AI on your computer, your website, and your workflows — so you get real work done by asking in plain English. I build the guardrails, I train you, and what I build is yours to keep.</p>
+      <span class="hero-kicker reveal">{{SERVICE}} &middot; Utah &amp; Remote</span>
+      <h1 class="hero-name reveal">Text us. It's handled.</h1>
+      <p class="hero-tagline reveal">{{SERVICE}} is a number you text when your website or your restaurant menu needs to change. Claude makes the change, checks that it's live, and texts you back. SMS, Telegram, or Discord. Nothing to install, nothing to learn, and every price is on this page.</p>
       <div class="hero-cta reveal">
-        <a href="mailto:remundtaylor3@gmail.com?subject=AI%20Working%20Session" class="btn btn-primary">Book a session — $150</a>
-        <a href="#packages" class="btn btn-outline">See packages</a>
+        <a href="mailto:remundtaylor3@gmail.com?subject=Getting%20started" class="btn btn-primary">Get started</a>
+        <a href="#packages" class="btn btn-outline">See pricing</a>
       </div>
+      <p class="svc-hero-note reveal">Built and run by Taylor Remund, a working software engineer. The bot is Claude with a name tag; I'm the person who reads the errors.</p>
     </div>
   </section>
 
@@ -52,25 +64,107 @@
     <div class="container">
       <span class="section-eyebrow reveal">The Experience</span>
       <h2 class="section-title reveal">How It Works</h2>
-      <p class="section-subtitle reveal">Here's what running your website on this setup actually looks like — no dashboards to learn, no developer to wait on.</p>
+      <p class="section-subtitle reveal">No dashboard, no ticket, no developer to wait on. You send a message; the change goes live; you get a reply.</p>
       <div class="steps-grid">
         <div class="step-card card reveal">
           <span class="step-num">1</span>
-          <h3>You ask</h3>
-          <p>Say it like you'd say it to a person — in Claude on your computer, or on the concierge plan, in a text message: "Change the homepage banner to announce our fall sale, 15% off bundles."</p>
+          <h3>You send it</h3>
+          <p>"Add Friday's show to the site." "Mark the burger sold out." A photo with "put this on the menu." Text it from your phone, or message the bot on Telegram or Discord. On SMS you get "Got it &mdash; working on this now" right away, so the wait never feels like silence.</p>
         </div>
         <div class="step-card card reveal">
           <span class="step-num">2</span>
-          <h3>It ships</h3>
-          <p>The change goes live on your real site, usually in under a minute. Refresh the page and it's there — no ticket, no invoice, no waiting.</p>
+          <h3>It does the work, in your project only</h3>
+          <p>Claude opens your site's files or your Plateful menu, makes the change, and puts it live. It works inside a walled-off folder that holds only your things: it can't reach another client, and it can't reach anything of yours you haven't handed it. Photos you send are straightened, resized, and placed where they belong.</p>
         </div>
         <div class="step-card card reveal">
           <span class="step-num">3</span>
-          <h3>It's reversible</h3>
-          <p>Every change is recorded, and any change can be undone with a single command. If the AI ever gets it wrong, nothing is lost — ever.</p>
+          <h3>It checks, then replies</h3>
+          <p>Before it tells you a change is live, it loads your live site to confirm. Then you get a plain-language reply: what changed and where to look. Not what you meant? "Undo that last change" puts it back.</p>
         </div>
       </div>
-      <p class="steps-note reveal">The same idea applies beyond websites: AI on your own computer, working with your own files, email, and tools — under written rules that you and I set together. On every plan the site, the code, and the accounts are <strong>yours</strong> — if you and I part ways, you keep all of it. The one thing that's mine is the texting service on the concierge plan: it runs on my systems, so it comes with me. What you'd lose is a convenience, not your website.</p>
+      <p class="steps-note reveal">Every change is saved in your site's history, so nothing is ever lost. Anything it shouldn't handle by itself &mdash; a domain change, a store, a login, anything that needs an account or money &mdash; it says so plainly and passes to me: you're told, and I get the request as a note.</p>
+    </div>
+  </section>
+
+  <!-- ==================== STRAIGHT ANSWERS ==================== -->
+  <section class="section" id="facts">
+    <div class="container">
+      <span class="section-eyebrow reveal">Straight Answers</span>
+      <h2 class="section-title reveal">What it is, exactly</h2>
+      <p class="section-subtitle reveal">Every sentence on this page is meant to be literally true of the system as it runs today. Here are the ones people ask about.</p>
+      <div class="svc-facts">
+        <div class="svc-fact card reveal">
+          <h3>Hours</h3>
+          <p>Today the service runs on a machine in my office, not a data center. It's on during my working hours, Mountain time, and off overnight. A text sent while it's off waits and is handled when it comes back on (SMS and Telegram; a Discord message sent while it's off needs to be sent again). It moves to a server before the first monthly plan bills, and this paragraph changes when it does.</p>
+        </div>
+        <div class="svc-fact card reveal">
+          <h3>Speed</h3>
+          <p>Texts are picked up within a minute. A typical change &mdash; new date, new wording, a photo &mdash; is made and confirmed live in a minute or two. Big jobs take longer. If one can't be finished, you're told rather than left waiting.</p>
+        </div>
+        <div class="svc-fact card reveal">
+          <h3>When something breaks</h3>
+          <p>You get: "I ran into some difficulties making that change, so I haven't put it live. Taylor's been notified and is on it." I get what you asked, the actual error, and how long it ran, and I fix it. Same if you hit the daily cap on messages: the bot stops and I'm told.</p>
+        </div>
+        <div class="svc-fact card reveal">
+          <h3>Ownership</h3>
+          <p>Your site is a GitHub repository under my account, hosted free on GitHub Pages. The day we part ways I transfer the repository to an account you control, and the site keeps running; you'd just change it another way. A restaurant's menu lives in its Plateful account, which is already yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DEMO ==================== -->
+  <section class="section section-alt" id="demo">
+    <div class="container">
+      <span class="section-eyebrow reveal">Demo</span>
+      <h2 class="section-title reveal">Talk to it before you pay for it</h2>
+      <p class="section-subtitle reveal">The bot calls itself <strong>Patch</strong>. A public chat room where anyone can ask it what it does is on the way and will be linked here. Until then, this is a sample conversation, written by me to show how it talks. It's marked as a sample because it is one.</p>
+      <!-- SAMPLE TRANSCRIPT. Replace this block with a real exchange from the
+           public demo room once plan 03 (API backend) is live. Every claim
+           Patch makes below is mapped in ai/CLAIMS.md like the rest of the page. -->
+      <div class="svc-chat reveal" aria-label="Sample conversation with the bot">
+        <div class="svc-chat-banner">Sample conversation &middot; not a real customer &middot; written to show the voice</div>
+        <div class="svc-chat-msg">
+          <span class="svc-chat-avatar">D</span>
+          <div><span class="svc-chat-name">Dana</span><p>so what do you actually do</p></div>
+        </div>
+        <div class="svc-chat-msg svc-chat-bot">
+          <span class="svc-chat-avatar">P</span>
+          <div><span class="svc-chat-name">Patch</span><p>you text me, i change your website. add a show, fix the hours, swap a photo. then i load the live page to make sure it's really there and tell you it's up. i'm not a chatbot that gives advice about websites. i'm the one who edits it.</p></div>
+        </div>
+        <div class="svc-chat-msg">
+          <span class="svc-chat-avatar">D</span>
+          <div><span class="svc-chat-name">Dana</span><p>what if you get it wrong</p></div>
+        </div>
+        <div class="svc-chat-msg svc-chat-bot">
+          <span class="svc-chat-avatar">P</span>
+          <div><span class="svc-chat-name">Patch</span><p>you say "undo that" and it goes back. every change is saved, nothing gets lost. and if something actually breaks on my end i tell you i haven't put it live and taylor gets the error, not you.</p></div>
+        </div>
+        <div class="svc-chat-msg">
+          <span class="svc-chat-avatar">D</span>
+          <div><span class="svc-chat-name">Dana</span><p>can you build me a store with checkout</p></div>
+        </div>
+        <div class="svc-chat-msg svc-chat-bot">
+          <span class="svc-chat-avatar">P</span>
+          <div><span class="svc-chat-name">Patch</span><p>not from a text, no. anything that needs an account or a real backend, like a store, a login, a domain, is taylor's job. i say so and pass it to him. you get a straight answer, not a maybe.</p></div>
+        </div>
+        <div class="svc-chat-msg">
+          <span class="svc-chat-avatar">D</span>
+          <div><span class="svc-chat-name">Dana</span><p>what does it cost</p></div>
+        </div>
+        <div class="svc-chat-msg svc-chat-bot">
+          <span class="svc-chat-avatar">P</span>
+          <div><span class="svc-chat-name">Patch</span><p>prices are on this page, i'm not reciting them. short version: a small change is fifty cents, a big one costs more, and every message is logged with what it cost.</p></div>
+        </div>
+        <div class="svc-chat-msg">
+          <span class="svc-chat-avatar">D</span>
+          <div><span class="svc-chat-name">Dana</span><p>are you a real person</p></div>
+        </div>
+        <div class="svc-chat-msg svc-chat-bot">
+          <span class="svc-chat-avatar">P</span>
+          <div><span class="svc-chat-name">Patch</span><p>no. i'm claude wearing a name tag that says patch. taylor's the person. he reads the errors, i read the menus.</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -78,72 +172,119 @@
   <section class="section" id="packages">
     <div class="container">
       <span class="section-eyebrow reveal">Pricing</span>
-      <h2 class="section-title reveal">Packages</h2>
-      <p class="section-subtitle reveal">Real prices, published on purpose. Every engagement starts with a working session, and the session fee comes off any package you book within 30 days.</p>
-      <div class="pkg-grid">
+      <h2 class="section-title reveal">Three ways to run it</h2>
+      <p class="section-subtitle reveal">Real prices, published on purpose. The difference between the tiers is who runs the AI.</p>
+      <div class="pkg-grid pkg-grid-3">
 
+        <div class="pkg-card card reveal">
+          <h3 class="pkg-name">Bring Your Own Assistant</h3>
+          <p class="pkg-for">For restaurants on <a href="https://plateful.fyi" target="_blank" rel="noopener" class="inline-link">Plateful</a> that already pay for an AI assistant.</p>
+          <div class="pkg-price">Free</div>
+          <p class="pkg-price-sub">no build, no monthly, no credits &middot; Plateful's usual per-order pricing applies to orders</p>
+          <ul class="pkg-list">
+            <li>Connect the assistant you already use &mdash; Claude on claude.ai or Claude Code, or any assistant that supports MCP connectors &mdash; directly to your Plateful restaurant</li>
+            <li>It can read your menu and mark items available or sold out, upload and remove photos, list orders and move them along, see customers and earnings</li>
+            <li>Runs on your assistant, your account, your bill. Nothing of mine is in the loop</li>
+            <li>I create the access key for your restaurant and send you the one-line setup</li>
+          </ul>
+          <a href="mailto:remundtaylor3@gmail.com?subject=Plateful%20assistant%20key" class="btn btn-outline">Ask for a key</a>
+        </div>
+
+        <div class="pkg-card card reveal">
+          <h3 class="pkg-name">Self-Serve: AI-Run Website or Store</h3>
+          <p class="pkg-for">For businesses that want their website to stop being a bottleneck and are happy to run the AI themselves.</p>
+          <div class="pkg-price">from $1,500</div>
+          <p class="pkg-price-sub">+ $99/mo</p>
+          <ul class="pkg-list">
+            <li>Complete build: a professional site or online store, done right</li>
+            <li>Claude on your own computer, on your own account &mdash; you open it and ask, and the change is live in under a minute</li>
+            <li>Every change recorded and reversible with one command</li>
+            <li>You own all of it: your accounts, your code, your customer data, your AI subscription</li>
+            <li>The monthly keeps the AI current and me on standby; the day-to-day changes are yours to make, and cost you nothing extra</li>
+          </ul>
+          <a href="mailto:remundtaylor3@gmail.com?subject=AI-Run%20Website" class="btn btn-outline">Get a quote</a>
+        </div>
+
+        <div class="pkg-card card pkg-featured reveal">
+          <span class="pkg-badge">Managed</span>
+          <h3 class="pkg-name">{{SERVICE}}: Text Your Website</h3>
+          <p class="pkg-for">For owners who don't want to install or learn anything &mdash; not even an app.</p>
+          <div class="pkg-price">from $2,500</div>
+          <p class="pkg-price-sub">+ $249/mo + credits for what it uses</p>
+          <ul class="pkg-list">
+            <li>Everything in Self-Serve, built the same way</li>
+            <li>You text a number (or message the bot on Telegram or Discord) and the change is live in a minute or two. Text a photo and it's on the site or the menu</li>
+            <li>Nothing to install, no logins, no dashboard &mdash; works from any phone, for anyone you authorize</li>
+            <li>Every change recorded and reversible &mdash; text "undo that" and it's gone</li>
+            <li>Runs on my systems and my AI account; the AI usage is paid in prepaid credits, priced below</li>
+            <li>The site and code are still yours &mdash; this is the service on top</li>
+          </ul>
+          <a href="mailto:remundtaylor3@gmail.com?subject=Text%20Your%20Website" class="btn btn-primary">Get started</a>
+        </div>
+
+      </div>
+
+      <div class="pkg-credits card reveal">
+        <h3>How credits work on the managed tier</h3>
+        <dl>
+          <dt>A message that does work</dt>
+          <dd>3&times; what the AI usage cost me, rounded up to the nearest 25&cent;, with a 50&cent; minimum. A small change &mdash; fix a typo, swap the hours, add a date &mdash; is 50&cent;. A big job &mdash; a new page, a reworked section &mdash; can run several dollars. Every message the bot handles counts, questions included.</dd>
+          <dt>Photos</dt>
+          <dd>A photo you send: nothing beyond the message. A stock photo it finds for you: free. A photo it generates for you: $1 flat, plus the message that asked for it.</dd>
+          <dt>Packs</dt>
+          <dd>$25 or $100. Credits don't expire and aren't refundable. When the balance runs out the bot tells you and stops until you top up; your website stays up regardless.</dd>
+          <dt>The record</dt>
+          <dd>Every message and every generated photo is one line on my usage ledger with its cost and your charge. That ledger is the record; your monthly statement comes from it, and you can ask to see it any time. Each person has a daily cap on messages so a runaway can't drain a balance.</dd>
+          <dt>Have your own Anthropic API key?</dt>
+          <dd>Skip credits. Your key pays Anthropic directly for what it uses, and I charge a flat $15/mo relay fee on top of the monthly.</dd>
+        </dl>
+      </div>
+
+      <!--
+        RETRACTED 2026-09-14 pending Taylor's decision (TAYLOR-TODO §3). These two
+        claims were published on this page until today and contradict the decided
+        model (VISION.md "Decided": managed = $249/mo + credits at a $0.50 floor).
+        If Taylor decides to KEEP them, restore the lines below and delete the
+        credits box above; if RETRACT, delete this comment.
+
+        Self-serve price line was:
+          "+ $99/mo, or 4% of store sales — whichever is greater, capped at $500/mo"
+        Managed price line was:
+          "+ $249/mo, or 4% of store sales — whichever is greater, capped at $500/mo"
+        Managed bullet was:
+          "Routine changes are <em>included</em>; that's the point. About a change a day is normal, more is fine"
+        The FAQ "Why a monthly fee?" also said the managed monthly covered routine changes.
+      -->
+
+      <h3 class="pkg-also-title reveal">Also available</h3>
+      <div class="pkg-grid pkg-grid-small">
         <div class="pkg-card card reveal">
           <h3 class="pkg-name">AI Working Session</h3>
           <p class="pkg-for">For anyone who wants to actually use AI, not just hear about it.</p>
           <div class="pkg-price">$150</div>
           <p class="pkg-price-sub">60 minutes &middot; $250 for a 2-hour deep dive</p>
           <ul class="pkg-list">
-            <li>Hands-on, on your real work — your emails, documents, spreadsheets, or website</li>
-            <li>Leave with at least one thing AI now does for you</li>
-            <li>Written recap of everything we set up, so it sticks</li>
-            <li>Doubles as discovery for the packages below</li>
+            <li>Hands-on, on your real work &mdash; your emails, documents, spreadsheets, or website</li>
+            <li>Leave with at least one thing AI now does for you, plus a written recap</li>
+            <li>Doubles as discovery for the builds above; the fee comes off any package you book within 30 days</li>
           </ul>
           <a href="mailto:remundtaylor3@gmail.com?subject=AI%20Working%20Session" class="btn btn-outline">Book a session</a>
         </div>
-
         <div class="pkg-card card reveal">
           <h3 class="pkg-name">AI on Your Computer</h3>
           <p class="pkg-for">For business owners who want a capable AI assistant that knows their business.</p>
           <div class="pkg-price">$500&ndash;$1,500</div>
           <p class="pkg-price-sub">one-time install &middot; optional care plan $79/mo</p>
           <ul class="pkg-list">
-            <li>Claude installed and configured on your machine, for your actual work</li>
-            <li>Connected to your files and tools, with written house rules and guardrails</li>
-            <li>Training session included — you drive, I coach</li>
+            <li>Claude installed and configured on your machine, connected to your files and tools, with written house rules</li>
+            <li>Training session included &mdash; you drive, I coach</li>
             <li>Care plan: I keep your setup current as AI changes, with a monthly check-in</li>
           </ul>
           <a href="mailto:remundtaylor3@gmail.com?subject=AI%20on%20My%20Computer" class="btn btn-outline">Start a conversation</a>
         </div>
-
-        <div class="pkg-card card reveal">
-          <h3 class="pkg-name">AI-Run Website or Store</h3>
-          <p class="pkg-for">For businesses that want their website to stop being a bottleneck — and are happy to run the AI themselves.</p>
-          <div class="pkg-price">from $1,500</div>
-          <p class="pkg-price-sub">+ $99/mo, or 4% of store sales &mdash; whichever is greater, capped at $500/mo</p>
-          <ul class="pkg-list">
-            <li>Complete build: a professional site or online store, done right</li>
-            <li>Claude on your own computer, on your own account — you open it and ask, and the change is live in under a minute</li>
-            <li>Every change recorded and reversible with one command</li>
-            <li>You own all of it: your accounts, your code, your customer data, your AI subscription</li>
-            <li>Monthly plan keeps the AI current and me on standby &mdash; the day-to-day changes are yours to ask for</li>
-          </ul>
-          <a href="mailto:remundtaylor3@gmail.com?subject=AI-Run%20Website" class="btn btn-outline">Get a quote</a>
-        </div>
-
-        <div class="pkg-card card pkg-featured reveal">
-          <span class="pkg-badge">Flagship</span>
-          <h3 class="pkg-name">Text Your Website</h3>
-          <p class="pkg-for">For owners who don't want to install or learn anything — not even an app.</p>
-          <div class="pkg-price">from $2,500</div>
-          <p class="pkg-price-sub">+ $249/mo, or 4% of store sales &mdash; whichever is greater, capped at $500/mo</p>
-          <ul class="pkg-list">
-            <li>Everything in AI-Run Website or Store, built the same way</li>
-            <li>You text a number and the change is live in about a minute. Text a photo and it's on the site.</li>
-            <li>Nothing to install, no logins, no dashboard &mdash; works from any phone, for anyone you authorize</li>
-            <li>Every change recorded and reversible &mdash; text "undo that" and it's gone</li>
-            <li>Routine changes are <em>included</em>; that's the point. About a change a day is normal, more is fine</li>
-            <li>The texting runs on my systems and my AI account. The site and code are still yours &mdash; this is the service on top</li>
-          </ul>
-          <a href="mailto:remundtaylor3@gmail.com?subject=Text%20Your%20Website" class="btn btn-primary">Get a quote</a>
-        </div>
-
       </div>
-      <p class="pkg-note reveal">Builds are quoted as a fixed price after a discovery session — no hourly billing, no surprise invoices. Monthly plans are 12-month agreements with a defined scope and a buyout option, so neither of us is ever stuck.</p>
+
+      <p class="pkg-note reveal">Builds are quoted as a fixed price after a discovery session &mdash; no hourly billing, no surprise invoices. Monthly plans are 12-month agreements with a defined scope and a buyout option, so neither of us is ever stuck. Nothing activates by itself: I approve every client personally before the first message is handled.</p>
     </div>
   </section>
 
@@ -155,7 +296,7 @@
       <div class="steps-grid">
         <div class="stat-card card reveal">
           <span class="stat-number">3+ yrs</span>
-          <span class="stat-label">Professional software engineer — this is my day job, not a side hustle</span>
+          <span class="stat-label">Professional software engineer &mdash; this is my day job, not a side hustle</span>
         </div>
         <div class="stat-card card reveal">
           <span class="stat-number">Live</span>
@@ -163,10 +304,10 @@
         </div>
         <div class="stat-card card reveal">
           <span class="stat-number">100%</span>
-          <span class="stat-label">Of my installs are versioned and reversible — the safety net is the architecture, not a promise</span>
+          <span class="stat-label">Of my installs are versioned and reversible &mdash; the safety net is the architecture, not a promise</span>
         </div>
       </div>
-      <p class="steps-note reveal" style="margin-top: 44px;">There are a lot of AI consultants right now. Most of them can't read the code the AI writes. I'm a full-stack engineer who builds and ships production software — which means when AI does the work, I can verify it, correct it, and put guardrails around it. That's the difference between "AI advice" and AI you can run your business on. <a href="../" class="inline-link">See my engineering work &rarr;</a></p>
+      <p class="steps-note reveal" style="margin-top: 44px;">There are a lot of AI consultants right now. Most of them can't read the code the AI writes. I'm a full-stack engineer who builds and ships production software &mdash; which means when AI does the work, I can verify it, correct it, and put guardrails around it. This site is maintained the same way I'll maintain yours: by asking Claude. <a href="../" class="inline-link">See my engineering work &rarr;</a></p>
     </div>
   </section>
 
@@ -178,27 +319,43 @@
       <div class="faq-grid" style="margin-top: 48px;">
         <div class="faq-card card reveal">
           <h3>Do I need to be technical?</h3>
-          <p>No. If you can describe what you want in a text message, you can use everything I set up. The technical part is my job — that's what the install is.</p>
+          <p>No. If you can describe what you want in a text message, you can use everything I set up. The bot replies in everyday language: "the change is live, check the Shows page on your phone," never file names or commands. The technical part is my job.</p>
         </div>
         <div class="faq-card card reveal">
           <h3>What if the AI breaks something?</h3>
-          <p>It can't break anything permanently. Every change is recorded before it goes live, and any change can be undone with one command. I'll show you the undo in our first session — it's the best part of the demo.</p>
+          <p>It can't break anything permanently. Every change is saved in your site's history before it goes live, any change can be undone by asking, and the bot doesn't say a change is live until it has loaded your live site and seen it. If a change fails partway, it tells you it hasn't put it live and I get the error.</p>
         </div>
         <div class="faq-card card reveal">
           <h3>Do I actually own it?</h3>
-          <p>Yes. Your accounts, your code, your data — and on the self-serve plans, your AI subscription too. Unlike all-in-one AI website startups, nothing I build holds your business hostage. The one exception is stated, not hidden: on Text Your Website, the texting service runs on my systems and my AI account. If we part ways you keep the site and everything in it; you'd just go back to making changes another way.</p>
+          <p>Yes. Your website, its code, your domain, your customer data &mdash; and on the self-serve tier, your AI subscription too. The code sits in a GitHub repository under my account while we work together and is transferred to yours when we stop. The one exception is stated, not hidden: the texting service runs on my systems and my AI account, so it ends when the engagement ends. You keep the site; you'd just change it another way.</p>
         </div>
         <div class="faq-card card reveal">
-          <h3>Why a monthly fee?</h3>
-          <p>AI tools change monthly, and a setup that isn't maintained slowly stops being useful. On every plan the fee keeps your install current, includes a monthly health check with a written report, and gets you priority access when you need a hand. On the self-serve plans it doesn't cover making your routine changes &mdash; you do that by asking your AI, that's the product. On Text Your Website it does: the routine changes are what you're paying for, and I run the system that makes them.</p>
+          <h3>Why a monthly fee <em>and</em> credits?</h3>
+          <p>They pay for different things. The monthly is the obligation: someone is on the hook, the system is kept running and current, and there's a person who reads the errors. The credits are the AI's actual usage, at three times what it costs me, which is what makes a business of many small "one more thing" changes possible to serve. On the self-serve tier there are no credits because the AI runs on your account.</p>
         </div>
         <div class="faq-card card reveal">
-          <h3>What's the difference between the two website plans?</h3>
-          <p>Who runs the AI. On AI-Run Website, Claude is installed on your computer, on your account &mdash; you open it and ask. On Text Your Website, you install nothing: you text a number and my systems do the rest. Same site, same build, same undo. One is a tool you own outright; the other is a service I run for you.</p>
+          <h3>Which apps can I use?</h3>
+          <p>SMS (photos included), Telegram, or Discord: message the bot directly, or I can point a channel in your Discord server or a Telegram group at your project so your whole team can use it. Only people you've authorized get a response; anyone else gets a polite "I don't recognize you" and I'm notified.</p>
         </div>
         <div class="faq-card card reveal">
-          <h3>What happens to what I text?</h3>
-          <p>Your message and any photos go to my system, which uses an AI to make the change and reply. Photos you send for the site get published on the site, which is public. I don't sell or share any of it, and your number is never used for anything but replying to you. The details are in the <a href="../privacy/" class="inline-link">privacy policy</a>; texting terms are in the <a href="../terms/" class="inline-link">terms</a>.</p>
+          <h3>What will it refuse?</h3>
+          <p>Two kinds of things. Anything outside its walls it simply can't do: it works in a folder holding only your site and menu, and any tool or file outside that is blocked, not just discouraged. And anything that's my job &mdash; a domain, a store, a login, a form that emails someone, payments &mdash; it declines in a sentence and forwards to me. It also won't publish things that are illegal, harmful, or misleading; the <a href="../terms/" class="inline-link">terms</a> spell that out.</p>
+        </div>
+        <div class="faq-card card reveal">
+          <h3>Is it available 24/7?</h3>
+          <p>Not yet, and I'd rather tell you than have you find out. It runs on a machine in my office during my working hours, Mountain time. Texts sent while it's off wait and are handled when it's back. It moves to a proper server before the first monthly plan bills, and this answer changes then.</p>
+        </div>
+        <div class="faq-card card reveal">
+          <h3>What happens to what I send?</h3>
+          <p>Your message and any photos go to my system, where Claude makes the change and writes the reply. The message carriers (Twilio, Telegram, or Discord), Anthropic, GitHub, and, for photos it finds or generates, Pexels and Google each handle their piece under their own terms. Photos you send for the site become public when they go live. I don't sell or share any of it. Details in the <a href="../privacy/" class="inline-link">privacy policy</a>; messaging terms in the <a href="../terms/" class="inline-link">terms</a>.</p>
+        </div>
+        <div class="faq-card card reveal">
+          <h3>Who is Patch?</h3>
+          <p>The bot's name. Patch is Claude running under rules I wrote, with your project's permissions and nothing more. A switchboard operator patches a call through; that's the job. I'm the human on the other end, and Patch will tell you so if you ask.</p>
+        </div>
+        <div class="faq-card card reveal">
+          <h3>What's the difference between the two website tiers?</h3>
+          <p>Who runs the AI. On Self-Serve, Claude is installed on your computer, on your account &mdash; you open it and ask, and there's nothing to meter. On the managed tier you install nothing: you text a number, my systems do the work, and the AI usage is paid in credits. Same site, same build, same undo. One is a tool you own outright; the other is a service I run for you.</p>
         </div>
       </div>
     </div>
@@ -208,23 +365,36 @@
   <section class="section" id="contact" style="padding-top: 0;">
     <div class="container">
       <div class="cta-panel reveal">
-        <h2>Start with a session.</h2>
-        <p>The best first step is a $150 working session: we put AI on a real task in your business, and you see exactly how this works before committing to anything bigger. Book a package within 30 days and the session is free.</p>
+        <h2>Start with a conversation.</h2>
+        <p>Tell me what you have &mdash; nothing yet, a Plateful restaurant, or a site that's become a chore &mdash; and which tier fits. I'll reply myself. Prefer to see it first? A $150 working session puts the AI on a real task in your business, and the fee comes off any package you book within 30 days.</p>
         <div class="hero-cta">
-          <a href="mailto:remundtaylor3@gmail.com?subject=AI%20Working%20Session" class="btn btn-primary">Email me to book</a>
+          <a href="mailto:remundtaylor3@gmail.com?subject=Getting%20started" class="btn btn-primary">Email me to get started</a>
           <a href="https://linkedin.com/in/taylor-remund-88169124a" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
         </div>
-        <!-- TODO: replace the mailto CTA with an inline Cal.com booking embed once the booking link is set up -->
+        <!-- TODO (plan 08): replace the mailto with the intake form once Plateful's
+             POST /intake exists; until then a Cal.com booking link is the interim
+             CTA when Taylor sets one up (TAYLOR-TODO §2). -->
       </div>
     </div>
   </section>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
-    <p>Taylor Remund &middot; 2026 &middot; This site is maintained the same way I'll maintain yours — by asking Claude.</p>
+    <p>Taylor Remund &middot; 2026 &middot; This site is maintained the same way I'll maintain yours &mdash; by asking Claude.</p>
     <p class="footer-links"><a href="../privacy/">Privacy Policy</a><span>&middot;</span><a href="../terms/">Terms of Service</a><span>&middot;</span><a href="../sms/">SMS</a></p>
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+  // Service-name fallback. The token is built from pieces so the rename sed
+  // never touches this script; once the token is gone from the page this is a no-op.
+  (function () {
+    var token = '{{' + 'SERVICE' + '}}', fallback = 'Patch';
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    var node, hits = [];
+    while ((node = walker.nextNode())) { if (node.nodeValue.indexOf(token) > -1) hits.push(node); }
+    hits.forEach(function (n) { n.nodeValue = n.nodeValue.split(token).join(fallback); });
+  })();
+  </script>
 </body>
 </html>
