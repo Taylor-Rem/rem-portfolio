@@ -1,3 +1,10 @@
+> **Superseded in part (2026-09-15, evening):** there are no longer "three
+> website tiers" or "two website tiers" to restructure. Self-serve
+> ("AI-Run Website or Store") and bring-your-own assistant are in cryo —
+> Taylor handles the compute and Text Your Website is the only website
+> plan. Read the tier passages below as the state of things when this plan
+> was written. See VISION "One tier" and `patchlamp/plans/02-pricing-tiers.md`.
+
 # REDESIGN — taylorremund.com, products first
 
 **Decided 2026-09-15.** The site was built to get Taylor hired. That's over:
