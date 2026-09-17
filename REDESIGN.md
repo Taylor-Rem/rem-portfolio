@@ -7,6 +7,8 @@
 
 # REDESIGN — taylorremund.com, products first
 
+**Executed and live 2026-09-17** (branch `redesign/products-first`, merged by Taylor). The Patchlamp price line says today's truth ("from $99 · Standard $250") rather than the three-tier line below; the old `/ai/` branch had already landed on `main` so step 1 was moot. Kept as the record of the decisions.
+
 **Decided 2026-09-15.** The site was built to get Taylor hired. That's over:
 the site exists to sell Plateful and Patchlamp, and to explain the services
 around them. Taylor is who's behind the products, not the subject. The
