@@ -1,7 +1,9 @@
 # taylorremund.com — Operating Manual
 
 The studio site, **products first** (REDESIGN.md, executed 2026-09-17). It
-sells Plateful and Patchlamp and explains the services around them; Taylor
+sells Patchlamp, with Plateful as its ordering engine for restaurants (since
+2026-09-21 Plateful is sold only as part of Patchlamp; its section points at
+patchlamp.com/restaurants), and explains the services around them; Taylor
 is who's behind the products, not the subject.
 - `/` (index.html) — hero (the two products) → Plateful → Patchlamp (a dark band) → Services → About (short) → Contact. Primary audience: small-business owners.
 - `/ai/` (ai/index.html) — "Services": the AI working session and the computer install, with published prices; a Patchlamp panel points website asks at patchlamp.com.
