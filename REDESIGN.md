@@ -3,7 +3,7 @@
 > ("AI-Run Website or Store") and bring-your-own assistant are in cryo —
 > Taylor handles the compute and Text Your Website is the only website
 > plan. Read the tier passages below as the state of things when this plan
-> was written. See VISION "One tier" and `patchlamp/plans/02-pricing-tiers.md`.
+> was written. See VISION § Decided "Four tiers (2026-09-17)" and `patchlamp/plans/02-pricing-tiers.md`.
 
 # REDESIGN — taylorremund.com, products first
 
