@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taylor Remund — Résumé</title>
-  <meta name="description" content="Taylor Remund, full-stack software developer in Utah: Laravel, Vue, Rust, Flutter. Skills, projects and experience — the engineer's view of the person behind Plateful and Patchlamp.">
+  <meta name="description" content="Taylor Remund, full-stack software developer in Utah: Laravel, Vue, Rust, Flutter. Skills, projects and experience — the engineer's view of the person behind Patchlamp.">
   <meta property="og:title" content="Taylor Remund — Résumé">
   <meta property="og:description" content="Full-stack software developer. Skills, projects and experience.">
   <meta property="og:type" content="profile">
@@ -24,7 +24,6 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="../#plateful">Plateful</a></li>
         <li><a href="../#patchlamp">Patchlamp</a></li>
         <li><a href="../ai/">Services</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -39,11 +38,11 @@
     <div class="container">
       <span class="section-eyebrow reveal">Résumé</span>
       <h1 class="section-title reveal">The engineer's view</h1>
-      <p class="section-subtitle reveal">I build and run <a href="../#plateful" class="inline-link">Plateful</a> and <a href="../#patchlamp" class="inline-link">Patchlamp</a>; this page is the résumé behind them — skills, projects and experience, for anyone hiring.</p>
+      <p class="section-subtitle reveal">I build and run <a href="../#patchlamp" class="inline-link">Patchlamp</a>; this page is the résumé behind it — skills, projects and experience, for anyone hiring.</p>
       <div class="about-grid">
         <div class="about-text reveal">
           <p>I'm a full-stack software developer based in American Fork, UT. I work across the stack at Kingsley Management Corporation — PHP/Laravel, Vue.js, MySQL, Flutter — and own complex features end-to-end, from the data model to the rollout plan. I started there as an automation engineer writing Python/Selenium tools for the support team, then transitioned into full-stack development in November 2024. That background means I know the domain intimately before I touch a schema.</p>
-          <p>On the side I've been shipping products: <a href="../#plateful" class="inline-link">Plateful</a> (a multi-tenant restaurant ordering platform, live in production), <a href="../#patchlamp" class="inline-link">Patchlamp</a> (a website you change by texting it), <a href="#projects" class="inline-link">Sharewire</a> (a self-hosted music sharing platform built end-to-end in 2.5 days), and <a href="#projects" class="inline-link">Artificer</a> (a multi-GPU AI agent orchestrator in async Rust).</p>
+          <p>On the side I've been shipping products: <a href="../#patchlamp" class="inline-link">Patchlamp</a> (a website you change by texting it), <a href="#projects" class="inline-link">Plateful</a> (a multi-tenant restaurant ordering platform, built and deployed in 2026, since retired), <a href="#projects" class="inline-link">Sharewire</a> (a self-hosted music sharing platform built end-to-end in 2.5 days), and <a href="#projects" class="inline-link">Artificer</a> (a multi-GPU AI agent orchestrator in async Rust).</p>
         </div>
         <div class="about-photo reveal">
           <img src="../assets/taylor.jpg" alt="Taylor Remund" class="profile-photo" width="220" height="220">
@@ -132,16 +131,12 @@
       <div class="projects-grid">
 
         <div class="project-card card reveal">
-          <div class="project-badge">Personal Project</div>
+          <div class="project-badge">Personal Project &middot; Retired 2026</div>
           <h3 class="project-name">Plateful</h3>
           <p class="project-subtitle">Multi-Tenant Restaurant Ordering SaaS</p>
-          <p class="project-desc">A single-codebase, multi-tenant SaaS that gives each restaurant a branded online ordering storefront on its own subdomain or custom domain — three distinct UI surfaces (customer storefront, per-restaurant tenant admin, platform super-admin) all served by one Laravel 13 + Inertia v3 + Vue 3 app. Designed the tenancy layer from the ground up: a custom-domain-first <code>ResolveTenant</code> middleware with subdomain fallback, a <code>CurrentTenant</code> container, and a <code>BelongsToTenant</code> trait that applies a global scope and auto-stamps <code>restaurant_id</code> so feature code never has to remember to filter by tenant. Implemented Stripe Connect destination charges with a per-restaurant <code>application_fee_percent</code>, a DB-backed cart and <code>OrderPlacement</code> service handling hours/closed-state validation, tax, tips, and loyalty awarding, and a pluggable <code>DeliveryDispatcher</code> abstraction. Backed by 65+ Pest test files covering tenant resolution, cross-tenant isolation, checkout, auth, and admin flows.</p>
+          <p class="project-desc">A single-codebase, multi-tenant SaaS that gave each restaurant a branded online ordering storefront on its own subdomain or custom domain — three distinct UI surfaces (customer storefront, per-restaurant tenant admin, platform super-admin) all served by one Laravel 13 + Inertia v3 + Vue 3 app. Designed the tenancy layer from the ground up: a custom-domain-first <code>ResolveTenant</code> middleware with subdomain fallback, a <code>CurrentTenant</code> container, and a <code>BelongsToTenant</code> trait that applies a global scope and auto-stamps <code>restaurant_id</code> so feature code never has to remember to filter by tenant. Implemented Stripe Connect destination charges with a per-restaurant <code>application_fee_percent</code>, a DB-backed cart and <code>OrderPlacement</code> service handling hours/closed-state validation, tax, tips, and loyalty awarding, and a pluggable <code>DeliveryDispatcher</code> abstraction. Backed by 65+ Pest test files covering tenant resolution, cross-tenant isolation, checkout, auth, and admin flows.</p>
           <div class="project-tags">
             <span>PHP</span><span>Laravel 13</span><span>Vue 3</span><span>Inertia v3</span><span>TypeScript</span><span>Tailwind</span><span>PostgreSQL</span><span>Pest 4</span><span>Stripe Connect</span>
-          </div>
-          <div class="project-links">
-            <a class="project-link" href="https://plateful.fyi" target="_blank" rel="noopener" title="Visit plateful.fyi"><svg width="20" height="20"><use href="../assets/icons.svg#icon-github"/></svg></a>
-            <a class="project-link" href="https://plateful.fyi" target="_blank" rel="noopener" title="Live Site"><svg width="20" height="20"><use href="../assets/icons.svg#icon-link"/></svg></a>
           </div>
         </div>
 
@@ -364,7 +359,7 @@
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <p>Taylor Remund &middot; 2026 &middot; This site is run the self-serve way: plain files, edited by asking Claude.</p>
-    <p class="footer-links"><a href="../#plateful">Plateful</a><span>&middot;</span><a href="../#patchlamp">Patchlamp</a><span>&middot;</span><a href="../ai/">Services</a><span>&middot;</span><a href="../privacy/">Privacy</a><span>&middot;</span><a href="../terms/">Terms</a><span>&middot;</span><a href="../sms/">SMS</a></p>
+    <p class="footer-links"><a href="../#patchlamp">Patchlamp</a><span>&middot;</span><a href="../ai/">Services</a><span>&middot;</span><a href="../privacy/">Privacy</a><span>&middot;</span><a href="../terms/">Terms</a><span>&middot;</span><a href="../sms/">SMS</a></p>
   </footer>
 
   <script src="../script.js"></script>

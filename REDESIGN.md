@@ -192,3 +192,5 @@ line, the nav list.
   their `legal-callout` blocks intact.
 - No console errors; Lighthouse accessibility 100 on `/` and `/resume/`;
   every internal link resolves on the Pages build.
+
+2026-09-24 (B28): Plateful was retired; its homepage section, hero card, nav/footer links, CSS and the résumé's plateful.fyi links came down. The hero is now Patchlamp + Services.
