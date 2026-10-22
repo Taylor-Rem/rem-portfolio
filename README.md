@@ -1,73 +1,17 @@
-# Taylor Remund — Portfolio
+# taylorremund.com
 
-Personal portfolio website. Dark, minimal, fully responsive single-page site built with plain HTML, CSS, and JavaScript.
+The studio site, products first: it sells Patchlamp and explains the services around it
+(the products-first redesign, live since 2026-09-17; `REDESIGN.md` is its record). Plain
+HTML, CSS and JavaScript, no build step, hosted on GitHub Pages from `main`, so a push to
+`main` is a production deploy. `CLAUDE.md` is the operating manual: the pages, the file map,
+the design and content rules.
 
-## Project Structure
+- `/` — the Patchlamp and Services cards, the Patchlamp band, services, a short about, contact.
+- `/ai/` — the services page: the AI working session and the computer install, with prices.
+- `/resume/` — the employer material (stats, skills, projects, experience).
+- `/privacy/`, `/terms/`, `/sms/` — the legal pages Twilio's 10DLC campaign lists.
 
-```
-portfolio/
-├── index.html    — Main page (all sections)
-├── style.css     — All styles
-├── script.js     — Typewriter, mobile nav, scroll animations
-└── README.md
-```
-
-## Local Development
-
-Open `index.html` in a browser — no build step or server required.
-
-For live reload during development, you can use any static server:
-
-```bash
-# Python
-python3 -m http.server 8000
-
-# Node
-npx serve .
-```
-
-## Deploy to GitHub Pages
-
-### Option 1: Deploy from `main` branch (simplest)
-
-1. Create a new GitHub repository (e.g., `taylor-rem.github.io` for a user site, or any name for a project site).
-
-2. Push the code:
-   ```bash
-   cd portfolio
-   git init
-   git add -A
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/Taylor-Rem/<repo-name>.git
-   git push -u origin main
-   ```
-
-3. Go to **Settings → Pages** in your GitHub repo.
-
-4. Under **Source**, select **Deploy from a branch**, choose `main` / `/ (root)`, and click **Save**.
-
-5. Your site will be live at:
-   - User site: `https://taylor-rem.github.io`
-   - Project site: `https://taylor-rem.github.io/<repo-name>`
-
-### Option 2: Using the `gh` CLI
-
-```bash
-cd portfolio
-git init
-git add -A
-git commit -m "Initial portfolio"
-gh repo create Taylor-Rem/taylor-rem.github.io --public --source=. --push
-```
-
-Then enable Pages in Settings as described above.
-
-## Before Deploying
-
-- Replace the profile photo placeholder in the About section with your real photo (if one is used)
-- Double-check the GitHub, LinkedIn, and email links in the Contact section
-
+Preview locally with `python3 -m http.server 8000` (the subfolder links need a server).
 
 ## Custom domain: taylorremund.com
 
