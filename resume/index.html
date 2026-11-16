@@ -42,7 +42,7 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>I'm a full-stack software developer based in American Fork, UT. I work across the stack at Kingsley Management Corporation — PHP/Laravel, Vue.js, MySQL, Flutter — and own complex features end-to-end, from the data model to the rollout plan. I started there as an automation engineer writing Python/Selenium tools for the support team, then transitioned into full-stack development in November 2024. That background means I know the domain intimately before I touch a schema.</p>
-          <p>On the side I've been shipping products: <a href="../#patchlamp" class="inline-link">Patchlamp</a> (a website you change by texting it), <a href="#projects" class="inline-link">Plateful</a> (a multi-tenant restaurant ordering platform, built and deployed in 2026, since retired), <a href="#projects" class="inline-link">Sharewire</a> (a self-hosted music sharing platform built end-to-end in 2.5 days), and <a href="#projects" class="inline-link">Artificer</a> (a multi-GPU AI agent orchestrator in async Rust).</p>
+          <p>On the side I've been shipping products: <a href="#patchlamp" class="inline-link">Patchlamp</a> (a website you change by texting it), <a href="#projects" class="inline-link">Plateful</a> (a multi-tenant restaurant ordering platform, built and deployed in 2026, since retired), <a href="#projects" class="inline-link">Sharewire</a> (a self-hosted music sharing platform built end-to-end in 2.5 days), and <a href="#projects" class="inline-link">Artificer</a> (a multi-GPU AI agent orchestrator in async Rust).</p>
         </div>
         <div class="about-photo reveal">
           <img src="../assets/taylor.jpg" alt="Taylor Remund" class="profile-photo" width="220" height="220">
@@ -129,6 +129,20 @@
       <h2 class="section-title reveal">Projects</h2>
       <p class="section-subtitle reveal">Most of my work lives in private company repos, so project cards below describe what I built rather than link to source. Public repos are linked where available.</p>
       <div class="projects-grid">
+
+        <div class="project-card card reveal" id="patchlamp">
+          <div class="project-badge">Product &middot; Live since September 2026</div>
+          <h3 class="project-name">Patchlamp</h3>
+          <p class="project-subtitle">A Website You Change by Texting It</p>
+          <p class="project-desc">The owner of a small business texts a number. Patch, the operator, opens the site's files, makes the change, checks that it is live and texts back, usually in a minute; &ldquo;undo that&rdquo; reverts it. Three codebases: a Laravel site (sign-up, accounts, chat), a Python relay that runs Claude Code inside one client's folder under that folder's permissions, and a toolbelt of small command-line tools the agent calls. Every transport pulls, so the machine that runs the agent has no webhook and no open port. Spending limits on image and video generation are enforced by the tools, and credentials never reach the model. <strong>More than 1,800 commits and 300 test files across the three codebases as of November 2026.</strong> Built and run by one person, me, working with Claude: I own the architecture, the review and the verification. The code is the business, so the overview linked below is the part you can read.</p>
+          <div class="project-tags">
+            <span>PHP</span><span>Laravel 13</span><span>Python</span><span>systemd</span><span>Claude Code</span><span>Twilio</span><span>Stripe</span><span>Cloudflare Pages</span>
+          </div>
+          <div class="project-links">
+            <a class="project-link" href="https://patchlamp.com" target="_blank" rel="noopener" title="patchlamp.com"><svg width="20" height="20"><use href="../assets/icons.svg#icon-link"/></svg></a>
+            <a class="project-link" href="https://github.com/Taylor-Rem/patchlamp" target="_blank" rel="noopener" title="How it is built, on GitHub"><svg width="20" height="20"><use href="../assets/icons.svg#icon-github"/></svg></a>
+          </div>
+        </div>
 
         <div class="project-card card reveal">
           <div class="project-badge">Personal Project &middot; Retired 2026</div>
